@@ -1,13 +1,85 @@
+:root {
+--col1: #0C0D08;
+--col2: #25261E;
+--col3: #A60303;
+--col4: #590202;
+--col5: #400101;
+}
+
+
 * {
     font-family: "Kanit", sans-serif;
 
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
+    height: 400vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {
     height: 100vh;
-    background: url('../assets/img/aparat_nikon_studio_filmowe_big.webp') center/cover;
+    background: url('../assets/img/aparat_nikon_studio_filmowe_sm.webp') center/cover fixed;
+    color: whitesmoke;
 }
+
+.btn-header-CTA {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* padding: 18px; */
+    background-color: var(--col3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.wrapper {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.black-box {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.344);
+    position: absolute;
+}
+
+@media all and (min-width: 700px) {
+    header {
+        background-image: url('../assets/img/aparat_nikon_studio_filmowe_big.webp');
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+}
+
+@media all and (min-width: 900px) {
+    
+    h1 {
+        font-size: 80px;
+    }
+}
+
