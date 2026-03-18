@@ -35,6 +35,16 @@ header {
     position: relative;
 }
 
+nav {
+    padding: 25px;
+    z-index: 1;
+    position: relative;
+}
+
+.logo img {
+    width: 120px;
+}
+
 .btn-header-CTA {
     display: block;
     width: 220px;
