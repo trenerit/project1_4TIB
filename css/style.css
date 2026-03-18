@@ -39,10 +39,25 @@ nav {
     padding: 25px;
     z-index: 1;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex-basis: 50%;
 }
 
 .logo img {
     width: 120px;
+}
+
+.menu {
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.material-symbols-outlined {
+    font-size: 7rem;
 }
 
 .btn-header-CTA {
