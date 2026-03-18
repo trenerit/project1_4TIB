@@ -2,6 +2,7 @@
 --col1: #0C0D08;
 --col2: #25261E;
 --col3: #A60303;
+--col3alpha: #a60303a6;
 --col4: #590202;
 --col5: #400101;
 }
@@ -9,6 +10,7 @@
 
 * {
     font-family: "Kanit", sans-serif;
+    box-sizing: border-box;
 
 }
 
@@ -30,23 +32,26 @@ header {
     height: 100vh;
     background: url('../assets/img/aparat_nikon_studio_filmowe_sm.webp') center/cover fixed;
     color: whitesmoke;
+    position: relative;
 }
 
 .btn-header-CTA {
     display: block;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    /* padding: 18px; */
+    width: 220px;
+    /* height: 120px; */
+    border-radius: .6rem;
+    padding: 18px;
     background-color: var(--col3);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    transition: .5s;
 }
 
 .wrapper {
     z-index: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,13 +62,16 @@ header {
 h1 {
     text-align: center;
     font-size: 40px;
+    flex-basis: 10%;
 }
 
 .black-box {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.344);
+    background-color: rgba(0, 0, 0, 0.434);
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @media all and (min-width: 700px) {
@@ -73,6 +81,11 @@ h1 {
 
     h1 {
         font-size: 55px;
+    }
+
+.btn-header-CTA:hover {
+    background-color: var(--col3alpha);
+    transform: translateY(-1rem);
     }
 }
 
