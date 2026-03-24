@@ -5,8 +5,13 @@
 --col3alpha: #a60303a6;
 --col4: #590202;
 --col5: #400101;
+--col6: whitesmoke;
 }
 
+@keyframes show-text-header {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 * {
     font-family: "Kanit", sans-serif;
@@ -37,8 +42,16 @@ header {
 
 nav {
     padding: 25px;
-    z-index: 1;
-    position: relative;
+    z-index: 2;
+    position: fixed;
+    color: var(--col6);
+    width: 100%;
+    /* background-color: #0d0d0d; */
+    background-color: transparent;
+}
+
+.box-nav {
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -56,13 +69,53 @@ nav {
     text-align: right;
 }
 
+.mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--col1);
+    left: 0;
+    top: 0;
+}
+
+.mobile-menu span {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+.mobile-menu ul {
+    margin: 0;
+    margin-top: 4rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    list-style: none;
+    /* border: 1px solid #fff; */
+    padding: 0;
+}
+
+.mobile-menu li {
+    padding-top: 3.8rem;
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid gray; */
+}
+
 .material-symbols-outlined {
     font-size: 7rem;
+    cursor: pointer;
 }
 
 .btn-header-CTA {
     display: block;
-    width: 220px;
+    width: 22rem;
     /* height: 120px; */
     border-radius: .6rem;
     padding: 18px;
@@ -72,6 +125,7 @@ nav {
     align-items: center;
     font-size: 3rem;
     transition: .5s;
+    margin-top: 3rem;
 }
 
 .wrapper {
@@ -82,12 +136,19 @@ nav {
     justify-content: center;
     align-items: center;
     height: 100%;
+    animation: show-text-header 2s linear;
+}
+
+.wrapper p {
+    font-size: 200%;
+    width: 60%;
 }
 
 h1 {
     text-align: center;
     font-size: 40px;
-    flex-basis: 10%;
+    /* flex-basis: 10%; */
+    margin: 0;
 }
 
 .black-box {
