@@ -43,23 +43,55 @@ body {
     flex-wrap: wrap;
 }
 
-@media all and (min-width: 700px) {
+.col {
+    flex: 0 0 100%;
+    padding: 1.5rem;
+}
+
+
+
+@media all and (min-width: 800px) {
     .container {
         width: 80%;
         padding: 0;
         margin: 0 auto;
     }
+    
+    .row {
+        flex-direction: row;
+    }
+
+    .col-m-50 {
+        flex: 0 0 50%;
+    }
+
+    .col-m-33 {
+        flex: 0 0 33.33333%;
+    }
+    
+    .col-m-25 {
+        flex: 0 0 25%;
+    }
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1100px) {
+    
     .container {
         width: 65%;
     }
 
-    .row {
-        flex-direction: row;
-        flex-wrap: nowrap;
+    .col-l-50 {
+        flex: 0 0 50%;
     }
+    
+    .col-l-33 {
+        flex: 0 0 33.33333%;
+    }
+    
+    .col-l-25 {
+        flex: 0 0 25%;
+    }
+    
 }
 
 
@@ -73,6 +105,10 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+p {
+    font-size: 1.7rem;
 }
 
 header {
@@ -218,7 +254,7 @@ h2 {
     font-size: 3.8rem;
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
     header {
         background-image: url('../assets/img/aparat_nikon_studio_filmowe_big.webp');
     }
@@ -233,7 +269,7 @@ h2 {
     }
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 1100px) {
     
     h1 {
         font-size: 80px;
