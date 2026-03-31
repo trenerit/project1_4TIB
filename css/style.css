@@ -1,5 +1,6 @@
 :root {
 --col1: #0C0D08;
+--col1alpha: #0c0d08e1;
 --col2: #25261E;
 --col3: #A60303;
 --col3alpha: #a60303a6;
@@ -94,6 +95,10 @@ body {
 
 .class-hide {
     display: none;
+}
+
+.class-show {
+    display: flex;
 }
 
 a {
@@ -347,6 +352,31 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.window-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    background-color: var(--col1alpha);
+    /* backdrop-filter: blur(4px); */
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 50%;
+    height: 50%;
+    background-color: whitesmoke;
+    border-radius: .6rem;
+    z-index: 5;
+    border: 4px solid var(--col3);
+    position: relative;
 }
 
 @media all and (min-width: 800px) {
